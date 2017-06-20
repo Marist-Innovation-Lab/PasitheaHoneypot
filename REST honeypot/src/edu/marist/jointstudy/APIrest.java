@@ -1,6 +1,11 @@
 package edu.marist.jointstudy;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
 
 /* Consider adding a logger in this manner.
@@ -130,7 +135,7 @@ public class APIrest extends NanoHTTPD {
       writeLog(msg);
 
       // Return the response.
-      String responseTxt = "?";  // TODO: What should go here?
+      String responseTxt = "<h1>404 Not Found</h1>";
       Response response = newFixedLengthResponse(responseTxt);
       return response;
    }
@@ -160,10 +165,15 @@ public class APIrest extends NanoHTTPD {
       }
       */
 
+      String fileName = "APIhp.log";
+
+      LocalDateTime now = LocalDateTime.now();
+      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd kk:mm:ssXX");
+      String nowString = formatter.format(now);
+
       // Try and write to the text stream.
-      try(PrintWriter output = new PrintWriter(new BufferedWriter(new FileWriter("logs.txt", true)))) {
-         // TODO: Refactor that above line. It's hideous!
-         output.println(new java.util.Date() + " ~ " + apiName + " ~ " + logMsg);
+      try(BufferedWriter buf = Files.newBufferedWriter(Paths.get(fileName))) {
+         buf.write(nowString + " ~ " + apiName + " ~ " + logMsg);
       } catch (IOException ex) {
          ex.printStackTrace();
       }
