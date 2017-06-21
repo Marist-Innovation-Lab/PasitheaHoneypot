@@ -132,7 +132,7 @@ public class APIrest extends NanoHTTPD {
       System.out.println("API received command: " + requestText + " from " + fromIP);
 
       // Make a log entry.
-      String msg = method.toString() + "~" + fromIP + "~" + requestText  + "~" + userAgent;
+      String msg = method.toString() + "~" + requestText + "~" + fromIP + "~" + userAgent;
       writeLog(msg);
 
       // Return the response.
