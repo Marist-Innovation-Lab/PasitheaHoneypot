@@ -132,10 +132,8 @@ public class APIrest extends NanoHTTPD {
       System.out.println("API received command: " + requestText + " from " + fromIP);
 
       // Make a log entry.
-      String msg = method.toString() + " from " + fromIP + " ~ " + requestText  + " ~ " + userAgent + " ~ ";
+      String msg = method.toString() + "~" + fromIP + "~" + requestText  + "~" + userAgent;
       writeLog(msg);
-
-       System.out.println("Am I responding with a 404?");
 
       // Return the response.
       String responseTxt = "<h1>404 Not Found</h1>";
@@ -184,7 +182,7 @@ public class APIrest extends NanoHTTPD {
        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd kk:mm:ss");
        String nowString = now.format(formatter);
 
-       String message = nowString + "~" + apiName + logMsg + System.lineSeparator();
+       String message = nowString + "~" + apiName + "~" + logMsg + System.lineSeparator();
 
        try (FileWriter fw = new FileWriter("API.log", true)) {
            fw.write(message);
