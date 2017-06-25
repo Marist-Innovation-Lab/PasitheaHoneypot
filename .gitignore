@@ -9,3 +9,5 @@ TSWLatexianTemp_*
 *.class
 
 workspace.xml
+/logs.txt
+logs.txt
