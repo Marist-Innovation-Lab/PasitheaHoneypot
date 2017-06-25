@@ -1,0 +1,11 @@
+.DS_Store
+~*.docx
+TSWLatexianTemp_*
+*.tcp
+*.tps
+*.aux
+*.dvi
+*.log
+*.class
+
+workspace.xml

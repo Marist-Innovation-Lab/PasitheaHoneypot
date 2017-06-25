@@ -1,0 +1,35 @@
+G* REST API on 3NFconsulting.com/gstar/
+======================================
+
+Time Frame
+----------
+Start: Mon Feb 06 09:24:55 EST 2017 
+End  : Thu Jun 01 03:35:22 EDT 2017
+
+
+Size
+----
+18,022,141,952 bytes 
+277,263,957 lines.
+
+It grew to 18GB before my droplet ran out of space.
+
+Split into 18 ~1GB files:
+> >split -b 1024m logs.txt Gstar-REST-API-log-segment-
+
+Analysis
+--------
+From 
+Mon Feb 06 09:24:55 EST 2017 
+to 
+Thu May 25 23:07:10 EDT 2017
+there were 4067 log entries. See 
+
+From
+Thu May 25 23:07:10 EDT 2017
+to 
+Thu Jun 01 03:35:22 EDT 2017
+all entries (or the VAST majority of them) are
+~Back-end~Unknown command: HEAD home
+at the rate of 500 - 1500 - 6000 per second.
+Perhaps some kind of API DoS attack?
