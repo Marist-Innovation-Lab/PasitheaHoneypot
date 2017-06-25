@@ -1,0 +1,21 @@
+Data Collection Algorithm:
+
+attacks = {DoS, DDoS}  // we’ll add more later
+traffic = {normal_only, attack_only, normal_and_attack}
+numruns = 1000
+for a in attacks {
+   for t in traffic {
+      logFileName = “attack “ + a + “ traffic “ + t + “.log”
+      createLogFile(logFileName)
+      for i = 0 to numruns-1 {
+         launchAttackAndLogData(a, t, logFileName)
+      end for      
+   end for
+end for
+
+Things to do to get started: 
+
+1. Work with Robert on getting yourself an isolated network environment so that these attacks are contained and don’t take down Banner or GitHub or Valve’s Steam servers. 
+2. Work with Casimer on getting and using software to perform these attacks.
+3. Work with me on the format of the log file, insuring that we can easily manipulate it. (My suggestion: CSV which we can directly import into Weka and easily turn into SQL insert statements, and therefore easily turn into G* graphs. What more could we want?) 
+4. Work with Matthew on the programming for all of this.
