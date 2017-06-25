@@ -135,6 +135,8 @@ public class APIrest extends NanoHTTPD {
       String msg = method.toString() + " from " + fromIP + " ~ " + requestText  + " ~ " + userAgent + " ~ ";
       writeLog(msg);
 
+       System.out.println("Am I responding with a 404?");
+
       // Return the response.
       String responseTxt = "<h1>404 Not Found</h1>";
       Response response = newFixedLengthResponse(responseTxt);
@@ -169,17 +171,23 @@ public class APIrest extends NanoHTTPD {
        File log = Paths.get("." + File.separator + "API.log").toFile();
        if(!log.exists()) {
            try {
-               System.out.println("log doesn't exist");
                log.createNewFile();
+               System.out.println("Log file not found, creating a new one.");
            } catch(IOException ioE) {
                ioE.printStackTrace();
                System.err.println("Could not create the log file.");
            }
 
-       }
+      }
 
-       try (FileWriter fw = new FileWriter(log.getPath(), true)) {
-           fw.write(LocalDateTime.now() + " ~ " + apiName + logMsg + System.lineSeparator());
+       LocalDateTime now = LocalDateTime.now();
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd kk:mm:ss");
+       String nowString = now.format(formatter);
+
+       String message = nowString + "~" + apiName + logMsg + System.lineSeparator();
+
+       try (FileWriter fw = new FileWriter("API.log", true)) {
+           fw.write(message);
        } catch (IOException ex) {
            ex.printStackTrace();
        }
