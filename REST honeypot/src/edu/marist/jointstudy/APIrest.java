@@ -57,6 +57,7 @@ public class APIrest extends NanoHTTPD {
    public static void main(String[] args) throws Exception {
       System.out.println("Welcome to the " + apiName +".");
       Runtime rt = Runtime.getRuntime();
+      System.out.println(" Running on port: " + apiPort);
       System.out.print(" JVM says Processors:" + rt.availableProcessors());
       System.out.print("  Total memory:" + java.text.NumberFormat.getNumberInstance(java.util.Locale.US).format(rt.totalMemory()));
       System.out.print("  Free memory:" + java.text.NumberFormat.getNumberInstance(java.util.Locale.US).format(rt.freeMemory()));
@@ -165,18 +166,23 @@ public class APIrest extends NanoHTTPD {
       }
       */
 
-      String fileName = "APIhp.log";
+       File log = Paths.get("." + File.separator + "API.log").toFile();
+       if(!log.exists()) {
+           try {
+               System.out.println("log doesn't exist");
+               log.createNewFile();
+           } catch(IOException ioE) {
+               ioE.printStackTrace();
+               System.err.println("Could not create the log file.");
+           }
 
-      LocalDateTime now = LocalDateTime.now();
-      DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd kk:mm:ssXX");
-      String nowString = formatter.format(now);
+       }
 
-      // Try and write to the text stream.
-      try(BufferedWriter buf = Files.newBufferedWriter(Paths.get(fileName))) {
-         buf.write(nowString + " ~ " + apiName + " ~ " + logMsg);
-      } catch (IOException ex) {
-         ex.printStackTrace();
-      }
+       try (FileWriter fw = new FileWriter(log.getPath(), true)) {
+           fw.write(LocalDateTime.now() + " ~ " + apiName + logMsg + System.lineSeparator());
+       } catch (IOException ex) {
+           ex.printStackTrace();
+       }
    }
 
 }
