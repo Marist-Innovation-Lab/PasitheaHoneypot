@@ -1,0 +1,8 @@
+%!TEX root=main.tex
+
+\section{Construction} \label{construction}
+
+We constructed Pasithea using Java, a common server side programming language, and NanoHTTPD \cite{Nanohttpd}, a lightweight HTTP library that receives HTTP requests and returns responses.  Implementing this kind of functionality enables Pasithea to simulate a real application server. It accepts any kind of request, regardless of the HTTP method, URL requested, or request body. Pasithea then logs the current time, the HTTP method, the path the client attempted to access, e.g. /index.html, the clients IP address, and the user agent information. Clients always receive a $<$h1$>$404 Not Found$<$/h1$>$ response, regardless of which resource they attempt to access.
+
+We are able to host this honeypot on an AWS EC2 instance using the free micro tier. We chose AWS both because of its appealing free tier model and because we are familiar with the security policies and standards that Amazon sets in place. We modified those default security measures within the AWS instance to enable access to the port hosting the API honeypot. Pasithea is currently indexed on Shodan, a web search engine that indexes Internetconnected devices. Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additional data \cite{unsavoryChar}.
+
