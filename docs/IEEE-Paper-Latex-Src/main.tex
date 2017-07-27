@@ -1,7 +1,7 @@
 
 %% bare_conf.tex
 %% V1.3
-%% 2007/01/11
+%% 2007/01/11 
 %% by Michael Shell
 %% See:
 %% http://www.michaelshell.org/
@@ -39,7 +39,7 @@
 %% ** Modified files should be clearly indicated as such, including  **
 %% ** renaming them and changing author support contact information. **
 %%
-%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
 %%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
 %%*************************************************************************
 
@@ -49,7 +49,6 @@
 % *** not appear when using other class files.                            ***
 % The testflow support page is at:
 % http://www.michaelshell.org/tex/testflow/
-
 
 
 % Note that the a4paper option is mainly intended so that authors in
@@ -63,6 +62,241 @@
 % should be used if it is desired that the figures are to be displayed in
 % draft mode.
 %
+
+\begin{filecontents}{bibliography.bib}
+
+@techreport{Symantec-Threat-Report,
+    author = "{Symantec}",
+    title = {{Internet Security Threat Report (ISTR)}},
+    institution = {Symantec Corporation}, 
+    year = {2017},
+    number = {22}
+}
+
+@techreport{IBM-XForce-Report,
+    author = "{IBM Security}",
+    title = {{IBM X-Force Threat Intelligence Index 2017}},
+    institution = {International Buisness Machines},
+    year = {2017}
+}
+
+@inproceedings{7796146, 
+    author={C. DeCusatis and P. Liengtiraphan and A. Sager and M. Pinelli}, 
+    booktitle={2016 IEEE International Conference on Smart Cloud (SmartCloud)}, 
+    title={Implementing Zero Trust Cloud Networks with Transport Access Control and First Packet Authentication}, 
+    year={2016}, 
+    pages={5-10}, 
+    keywords={authorisation;cloud computing;computer centres;file servers;message authentication;steganography;trusted computing;TCP packet request;authentication token;cloud computing data center;data center security;enterprise-class server;first-packet authentication;steganographic overlay;transport access control;zero trust cloud network;Access control;Authentication;Cloud computing;Logic gates;Servers;authentication;cloud;cybersecurity;token;transport}, 
+    doi={10.1109/SmartCloud.2016.22}, 
+    month={Nov}
+}
+
+@article{GStar,
+    author = "{Alan G. Labouseur and Jeremy Birnbaum and Paul W. Olsen, Jr. and Sean R. Spillane and Jayadevan Vijayan and Jeong-Hyon Hwang and Wook-Shin Han}",
+    title = {{The G* Graph Database: Efficiently Managing Large Distributed Dynamic Graphs}},
+    journal = {Distrib. Parallel Databases},
+    issue_date = {December  2015},
+    volume = {33},
+    number = {4},
+    month = dec,
+    year = {2015},
+    issn = {0926-8782},
+    pages = {479--514},
+    numpages = {36},
+    url = {http://dx.doi.org/10.1007/s10619-014-7140-3},
+    doi = {10.1007/s10619-014-7140-3},
+    acmid = {2821911},
+    publisher = {Kluwer Academic Publishers},
+    address = {Hingham, MA, USA},
+    keywords = {Big data, Distributed databases, Graphs, Parallel computing, Queries},
+}
+
+
+@misc{REST-API-use,
+    author = "{Daniel R. Cogan}",
+    title = {{"REpresentational State Transfer in the Modern Internet"}},
+    note = {CMC Senior Theses. 1387.},
+    howpublished = {\url{http://scholarship.claremont.edu/cmc_theses/1387}},
+    year = {2016}
+}
+
+@misc{Nissan-Leaf,
+    author = "{Troy Hunt}",
+    title = {{Controlling vehicle features of Nissan LEAFs across the globe via vulnerable APIs}},
+    howpublished = {\url{https://www.troyhunt.com/controlling-vehicle-features-of-nissan/}},
+    month = {Feb},
+    year = {2016},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@article{IRS,
+    author = "{Stephen Ohlemacher}",
+    title = {APNewsBreak: IRS says thieves stole tax info from 100,000},
+    journal = {Associated Press},
+    month = May,
+    year = {2015}
+}
+
+@unpublished{honeypot-Def,
+    author = "{William W. Martin}",
+    title = {{Honey Pots and Honey Nets - Security through Deception}},
+    month = {May},
+    year = {2001}
+}
+
+@book{Stoll:1989:CET:67554,
+     author = {Clifford Stoll},
+     title = {The Cuckoo's Egg: Tracking a Spy Through the Maze of Computer Espionage},
+     year = {1989},
+     isbn = {0-385-24946-2},
+     publisher = {Doubleday},
+     address = {New York, NY, USA}
+}
+
+@inproceedings{Provos:2004:VHF:1251375.1251376,
+     author = {Niels Provos},
+     title = {A Virtual Honeypot Framework},
+     booktitle = {Proceedings of the 13th Conference on USENIX Security Symposium - Volume 13},
+     series = {SSYM'04},
+     year = {2004},
+     location = {San Diego, CA},
+     pages = {1--1},
+     numpages = {1},
+     url = {http://dl.acm.org/citation.cfm?id=1251375.1251376},
+     acmid = {1251376},
+     publisher = {USENIX Association},
+     address = {Berkeley, CA, USA}
+} 
+
+@book{Graham:2008:FAD:1355323,
+     author = {Wayne Graham},
+     title = {Facebook API Developers Guide (Firstpress)},
+     year = {2008},
+     isbn = {1430209690, 9781430209690},
+     publisher = {APress}
+} 
+
+@inproceedings{SCADA-Testbed-API, 
+    author={C. M. Davis and J. E. Tate and H. Okhravi and C. Grier and T. J. Overbye and D. Nicol}, 
+    booktitle={2006 38th North American Power Symposium}, 
+    title={SCADA Cyber Security Testbed Development}, 
+    year={2006}, 
+    pages={483-488}, 
+    keywords={SCADA systems;power engineering computing;power system control;power system security;public utilities;SCADA cyber security testbed;power system;public networks;public utilities;supervisory control and data acquisition;vulnerability assessment;Access protocols;Communication system control;Computer security;Hardware;IEC standards;Power system modeling;Power system security;Real time systems;SCADA systems;System testing}, 
+    doi={10.1109/NAPS.2006.359615}, 
+    month={Sept}
+}
+
+@misc{Honeypot-API,
+    title = {{Http:BL API Specification}},
+    howpublsihed = {\url{https://www.projecthoneypot.org/httpbl_api.php}},
+    note = {Online, Accessed 7/25/2017}
+}
+
+@misc{DoS-Def,
+    title = {{Security Tip (ST04-015) Understanding Denial-of-Service Attacks}},
+    year = {2013},
+    howpublished = {\url{https://www.us-cert.gov/ncas/tips/ST04-015}},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@article{Hive-Plot,
+    author = {Martin Krzywinski and Inanc Birol and Steven Jones JM and Marco A Marra},
+    title = {Hive plotsâ€”rational approach to visualizing networks},
+    journal = {Briefings in Bioinformatics},
+    volume = {13},
+    number = {5},
+    pages = {627-644},
+    year = {2012},
+    doi = {10.1093/bib/bbr069},
+    URL = { + http://dx.doi.org/10.1093/bib/bbr069},
+    eprint = {/oup/backfile/content_public/journal/bib/13/5/10.1093/bib/bbr069/2/bbr069.pdf}
+}
+
+@misc{XSS-Def,
+    title = {{Cross-site Scripting (XSS)}},
+    year = {2016},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@misc{F-Secure,
+    author = "{Mikko Hypponen. and Tomi Tuominen.}",
+    title = {{F-Secure State of Cyber Security}},
+    howpublished = {\url{http://branden.biz/wp-content/uploads/2017/02/cyber-security-report-2017.pdf}},
+    Month = {Feb},
+    Year = {2017},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@misc{TheMoon,
+    author = "{Bing Liu}",
+    title = {{TheMoon - A P2P botnet targeting Home Routers}},
+    howpublished = {\url{https://blog.fortinet.com/2016/10/20/themoon-a-p2p-botnet-targeting-home-routers}},
+    Month = {Oct},
+    Year = {2016},
+    note = {Online, Accessed 7/19/2017}
+}
+
+@misc{Tomcat-Exploit,
+    author = "{Tony Lee}",
+    title = {{Manually Exploiting Tomcat Manager}},
+    howpublished = {\url{http://blog.opensecurityresearch.com/2012/09/manually-exploiting-tomcat-manager.html}},
+    Month = {Sep},
+    Year = {2012},
+    note = {Online, Accessed 7/19/2017}
+}
+
+@misc{Nanohttpd,
+    author = "{elonen. and LordFokas. and Richard van Nieuwenhoven.}",
+    title = {{NanoHttpd}},
+    howpublished = {\url{https://github.com/NanoHttpd/nanohttpd}},
+    commit = {f1cb85c},
+    year = {2017},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@misc{unsavoryChar,
+    author = "{Lawrence Fernandes}",
+    title = {{Shodan: The Hacker’s Search Engine}},
+    howpublished = {\url{https://www.cybrary.it/0p3n/intro-shodan-search-engine-hackers/}},
+    month = {Mar},
+    year = {2016},
+    note = {Online, Accessed 7/19/2017}
+}
+
+@misc{ab,
+    title = {{ab - Apache HTTP server benchmarking tool}},
+    howpublished = {\url{https://httpd.apache.org/docs/2.4/programs/ab.html}},
+    note = {Online, Accessed 7/15/2017}
+}
+
+@misc{3Pillar,
+    author = "{Singh Sukhwinder}",
+    title = {{Performance Testing of a REstful API using JMeter}},
+    howpublished = {\url{https://www.3pillarglobal.com/insights/performance-testing-of-a-restful-api-using-jmeter}},
+    note = {Online, Accessed 7/12/2017}
+}
+
+@misc{site24x7,
+    title = {{Performance Metrics of Rest API Monitor}},
+    howpublished = {\url{https://www.site24x7.com/help/performance-metrics/rest-api.html}},
+    Month = {Jul},
+    Year = {2015},
+    note = {Online, Accessed 7/12/2017}
+}
+
+@article{performance,
+    author = "{Denys Mishunov}",
+    title = {{Why Perceived Performance Matters, Part 1: The Perception Of Time}},
+    journal = {Smashing Magazine},
+    month = {Sep},
+    year = {2015},
+    note = {Online, Accessed 7/12/2017}
+}
+
+\end{filecontents}
+
+
 \documentclass[10pt, conference]{IEEEtran}
 \usepackage{blindtext, graphicx}
 % Add the compsoc option for Computer Society conferences.
@@ -70,36 +304,6 @@
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[conference]{../sty/IEEEtran}
-
-
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
 
 
 % *** CITATION PACKAGES ***
@@ -119,10 +323,6 @@
 % The latest version can be obtained at:
 % http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
 % The documentation is contained in the cite.sty file itself.
-
-
-
-
 
 
 % *** GRAPHICS RELATED PACKAGES ***
@@ -166,185 +366,6 @@
 % http://www.tug.org/applications/pdftex
 
 
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage[cmex10]{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics. If using
-% it, be sure to load this package with the cmex10 option to ensure that
-% only type 1 fonts will utilized at all point sizes. Without this option,
-% it is possible that some math symbols, particularly those within
-% footnotes, will be rendered in bitmap form which will result in a
-% document that can not be IEEE Xplore compliant!
-%
-% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
-% There is also a support site at:
-% http://algorithms.berlios.de/index.html
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/tools/
-
-
-%\usepackage{mdwmath}
-%\usepackage{mdwtab}
-% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
-% especially mdwmath.sty and mdwtab.sty which are used to format equations
-% and tables, respectively. The MDWtools set is already installed on most
-% LaTeX systems. The lastest version and documentation is available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-%\usepackage{eqparbox}
-% Also of notable interest is Scott Pakin's eqparbox package for creating
-% (automatically sized) equal width boxes - aka "natural width parboxes".
-% Available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
-
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\usepackage[tight,footnotesize]{subfigure}
-% subfigure.sty was written by Steven Douglas Cochran. This package makes it
-% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
-% work, it is a good idea to load it with the tight package option to reduce
-% the amount of white space around the subfigures. subfigure.sty is already
-% installed on most LaTeX systems. The latest version and documentation can
-% be obtained at:
-% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
-% subfigure.sty has been superceeded by subfig.sty.
-
-
-
-%\usepackage[caption=false]{caption}
-%\usepackage[font=footnotesize]{subfig}
-% subfig.sty, also written by Steven Douglas Cochran, is the modern
-% replacement for subfigure.sty. However, subfig.sty requires and
-% automatically loads Axel Sommerfeldt's caption.sty which will override
-% IEEEtran.cls handling of captions and this will result in nonIEEE style
-% figure/table captions. To prevent this problem, be sure and preload
-% caption.sty with its "caption=false" package option. This is will preserve
-% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
-% (recommended due to many improvements over 1.2) of subfig.sty supports
-% the caption=false option directly:
-%\usepackage[caption=false,font=footnotesize]{subfig}
-%
-% The latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
-% The latest version and documentation of caption.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure. The latest version and documentation can be found at:
-% http://www.ctan.org/tex-archive/macros/latex/base/
-
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
-% Documentation is contained in the stfloats.sty comments as well as in the
-% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
-% does not allow \baselineskip to stretch. Authors submitting work to the
-% IEEE should note that IEEE rarely uses double column equations and
-% that authors should try to avoid such use. Do not be tempted to use the
-% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
-% not format its papers in such ways.
-
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
-% Read the url.sty source comments for usage information. Basically,
-% \url{my_url_here}.
-
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 \IEEEoverridecommandlockouts
@@ -353,51 +374,18 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Creating an Application Programming Interface Honeypot}
+\title{An API Honeypot for DDoS and XSS Analysis}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Dayna Eidle, G Leaden, Thomas Magnusson, Marcus Zimmermann,\\
-and Casimer DeCusatis}
+\author{\IEEEauthorblockN{G Leaden, Marcus Zimmermann, Casimer DeCusatis, \textit{Fellow, IEEE}, and Alan Labouseur}
 \IEEEauthorblockA{School of Computer Science and Mathematics\\
 Marist College\\
 Poughkeepsie, NY 12601\\
-Email: casimer.decusatis@marist.edu} \thanks{This work was supported by the National Science Foundation under CC*DNI Integration (Area 4): Application Aware Software-Defined Networks for Secure Cloud Services (SecureCloud). Award \#1541384.}}
-
-
-
-
-% conference papers do not typically use \thanks and this command
-% is locked out in conference mode. If really needed, such as for
-% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
-% after \documentclass
-
-% for over three affiliations, or if they all won't fit within the width
-% of the page, use this alternative format:
-% 
-%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
-%Homer Simpson\IEEEauthorrefmark{2},
-%James Kirk\IEEEauthorrefmark{3}, 
-%Montgomery Scott\IEEEauthorrefmark{3} and
-%Eldon Tyrell\IEEEauthorrefmark{4}}
-%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
-%Georgia Institute of Technology,
-%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
-%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
-%Email: homer@thesimpsons.com}
-%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
-%Telephone: (800) 555--1212, Fax: (888) 555--1212}
-%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
-
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
+Emails: g.leaden1@marist.edu, marcus.zimmermann1@marist.edu, \\casimer.decusatis@marist.edu, alan.labouseur@marist.edu \thanks{This work was supported by the National Science Foundation under CC*DNI Integration (Area 4): Application Aware Software-Defined Networks for Secure Cloud Services (SecureCloud). Award \#1541384.}}
+}
 
 
 % make the title area
@@ -405,225 +393,106 @@ Email: casimer.decusatis@marist.edu} \thanks{This work was supported by the Nati
 
 
 \begin{abstract}
-Honeypots are systems built to mimic critical parts of a network, distracting attackers while logging their information to develop attack profiles. This paper discusses the implementation of a honeypot disguised as a REpresentational State Transfer (REST) Application Programming Interface (API). More specifically, this paper discusses the reason for its development, how it was developed, and how it performs under varying traffic conditions. Ultimately, this API honeypot will be implemented as part of our SecureCloud test suite alongside many other security technologies. In doing so, we hope to contribute to the development of better security for APIs and Software Defined Networks (SDN).
+Honeypots are systems built to mimic critical parts of a network, distracting attackers while logging their information to develop attack profiles. This paper discusses the design and implementation of a honeypot disguised as a REpresentational State Transfer (REST) Application Programming Interface (API). This honeypot was deployed as part of the NSF SecureCloud test bed.  We discuss the motivation for this work, design features of the honeypot, and experimental data showing performance under various traffic conditions.  We also present the analysis of both a distributed denial of service (DDoS) attack and a cross-site scripting (XSS) malware insertion against this honeypot.
 %\boldmath
 %\blindtext[1]
 \end{abstract}
-% IEEEtran.cls defaults to using nonbold math in the Abstract.
-% This preserves the distinction between vectors and scalars. However,
-% if the journal you are submitting to favors bold math in the abstract,
-% then you can use LaTeX's standard command \boldmath at the very start
-% of the abstract to achieve this. Many IEEE journals frown on math
-% in the abstract anyway.
 
-% Note that keywords are not normally used for peerreview papers.
-%\begin{IEEEkeywords}
-%IEEEtran, journal, \LaTeX, paper, template.
-%\end{IEEEkeywords}
-
-
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
-
-
 
 \section{Introduction}
 \label{intro}
-Software Defined Networking (SDN) is an approach to network architecture that separates the control and data planes of a network, providing centralized management. While extremely beneficial to network operations, attackers can leverage this single point of control in order to take over of the network. Thus, strong cybersecurity is critical to protect SDN networks. SecureCloud aims to combat the growing number of cyber attacks using an autonomic “Observe Orient Decide Act” (OODA) control plane on an SDN.
+In recent years, the number and severity of cyber-attacks has grown significantly \cite{Symantec-Threat-Report, IBM-XForce-Report}, \cite{IBM-XForce-Report}. Attackers have managed to pull off massive virtual bank heists, distributed denial of service (DDoS) attacks powered by botnets of the Internet of Things (IoT) devices, and even malware-cause power outages \cite{IBM-XForce-Report}. The National Science Foundation (NSF) SecureCloud test bed aims to combat the growing number of cyber-attacks against cloud networks using an autonomic, zero trust environment \cite{7796146}.  Our most recent implementation utilizes new software developed for use in an Observe Orient Decide Act (OODA) control plane.
 
-GStar (G*), a graph database application and vital instrument for our research with SecureCloud, was recently subjected to several kinds of attacks on its Application Programming Interface (API), a tool for sharing resources between applications over the internet. More specifically, the attacks, targeted G*’s REpresentational State Transfer (REST) API, today’s most commonly used API architecture \cite{REST-API-use}. From what the team has found in its research, such as attacks on the Nissan Leaf \cite{Nissan-Leaf}, the Internal Revenue Service \cite{IRS}, and G*, REST APIs have proved to be an appealing attack front. Thus, the team feels that it is worthwhile to create structured profiles on such attackers to help construct effective standards in API security.
-To do this, the team created an API honeypot to attract attackers. Honeypots are servers or systems built and deployed to mimic critical parts of a network, effectively distracting attackers and logging attack information in the process \cite{honeypot-Def}. Disguising a honeypot as an API allows a defending team to analyze and understand attack patterns, pushing the standard for securing APIs further.
-The data extracted from G* does not contain the information necessary to adequately analyze the attempts on the API. This is due to shortcomings in the original logging system which only logged the timestamp, source, command type, and command text. With the data from the new API honeypot, aptly named Pasithea (the Greek goddess of rest), we aim to develop an attack profile that includes the user agent, the IP address, and the information extracted from G*.
+Part of this system uses the GStar graph database application to collect and analyze data. Specifically, GStar makes use of a PostGreSQL object relational database, which allows us to perform mathematical analysis on cyber-attack data \cite{GStar}.  After making our initial work available online, we observed a number of unauthorized connection attempts against the GStar Application Programming Interface (API).  More specifically, the attacks targeted GStar's REpresentational State Transfer (REST) API, which is among the most commonly used API architectures \cite{REST-API-use}. There are many examples of recent attacks against REST APIs, including well publicized attacks on the Nissan Leaf smart car \cite{Nissan-Leaf} and the Internal Revenue Service database \cite{IRS}.  Existing APIs often do not follow security best practices, and developers can be lulled into a false sense of security believing that the API will not be an attack target.  Given the recent unsolicited attacks against GStar, we felt it was appropriate to create a more structured profile of these attacks, in an effort to improve the security of our system and other REST APIs.
 
-The information gathered from Pasithea can help us answer questions like: How likely are attacks on an API to occur? Where are the attacks coming from? What can we do to prevent these attacks from happening? Can we classify these attacks or associate them with a specific location or group?
+To accomplish this, we created a low-interaction API honeypot to collect data on these attacks.  Honeypots are servers or systems built and deployed to mimic critical parts of a network, effectively distracting attackers and logging attack information in the process \cite{honeypot-Def}. Disguising a honeypot as an API allows us to analyze and understand attack patterns.  Since our defensive response improves as we collect more data, we can effectively use the attackers' strengths against them; the more times our honeypot is attacked, the better our defense posture becomes.  Since our original REST API was not designed to comprehensively log attack data, we only captured the timestamp, source, command type, and command text for the initial attacks.  To address these shortcomings, we created a new API honeypot, aptly named Pasithea (the Greek goddess of rest), capable of creating an attack profile that includes the user agent, the IP address, and other the information extracted from GStar.
 
-Ultimately, we would like to integrate Pasithea into our autonomic OODA SecureCloud test suite along with other projects at the Marist IBM Joint Study.
+The information gathered from Pasithea can help us determine where attacks are coming from, how they can be classified, and what can be done to defend against such attacks.  Our API honeypot Pasithea has been deployed online, and data collected from this and other sources will be integrated into the NSF SecureCloud test bed project.  Our honeypot enables security experts to analyze and remedy emerging attacks, to avoid falling into framework-complacency.  While various types of honeypots have existed for some time \cite{Stoll:1989:CET:67554}, \cite{Provos:2004:VHF:1251375.1251376}, and many security projects use APIs to make their data more easily consumable \cite{Graham:2008:FAD:1355323},\cite{SCADA-Testbed-API}, the use of a REST API itself to attract malicious traffic and collect attack data does not appear to have been studied previously.  It is important to note a potential source of confusion regarding API honeypots. Honeypot APIs, though similar in name, are not to be confused with Pasithea, which is an API honeypot. A honeypot API is an API made to interface with a specific honeypot, returning useful data or executing certain methods specified by the request \cite{Honeypot-API}. An API honeypot such as Pasithea, on the other hand, is entirely different; it functions as a proper honeypot by gathering data on unauthorized API requests.  This type of API honeypot represents a novel approach to attack analysis that will hopefully lead to the development of more secure and robust APIs for cloud-based applications.
 
-Following existing security frameworks, while secure at the moment, can lull API developers into a false sense of security. Our API honeypot offers glimpses into the immediate future of API attacks, before they affect real applications. It is a valuable tool in a security-concerned developer's tool belt. It also enables security experts to analyze and remedy emerging attacks, to avoid falling into framework-complacency.
-
-We believe that API honeypots are a new and unexplored technology that could lead to the development of more secure and robust APIs.
-
-The remainder of this paper is organized as follows. Section \ref{Analysis} presents the analysis of the data received from both the G* REST API logs and current data collected by Pasithea. Section \ref{construct} describes the software design and features of Pasithea. Lastly, Section \ref{performance} presents the results from performance testing against Pasithea.
-
-
-
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation Results}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command, the
-% \label for the overall figure must come after \caption.
-% \hfil must be used as a separator to get equal spacing.
-% The subfigure.sty package works much the same way, except \subfigure is
-% used instead of \subfloat.
-%
-%\begin{figure*}[!t]
-%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
-%\label{fig_second_case}}}
-%\caption{Simulation results}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-
-
-% An example of a floating table. Note that, for IEEE style tables, the 
-% \caption command should come BEFORE the table. Table text will default to
-% \footnotesize as IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that IEEE does not put floats in the very first column - or typically
-% anywhere on the first page for that matter. Also, in-text middle ("here")
-% positioning is not used. Most IEEE journals use top floats exclusively.
-% Note that, LaTeX2e, unlike IEEE journals, places footnotes above bottom
-% floats. This can be corrected via the \fnbelowfloat command of the
-% stfloats package.
-
+The remainder of this paper is organized as follows. Section II presents the analysis of the data received from both the GStar REST API logs and current data collected by Pasithea. Section III describes the software design and features of Pasithea. Lastly, Section IV presents the results from performance testing against Pasithea.
 
 
 \section{Analysis}
 \label{Analysis}
-Pasithea is intended to help further investigate multiple attacks, most notably a cross-site scripting (XSS) attempt, that targeted G*’s REST API. The team is further motivated by the fact that, to the best of our knowledge, an API honeypot has not been developed and deployed as a security measure on an SDN network. With that said, it is important to note a potential source of confusion regarding API honeypots. Honeypot APIs, though similar in name, are not to be confused with Pasithea, an API honeypot. A honeypot API is an API made to interface with a specific honeypot, returning useful data specified by the request. An API honeypot, on the other hand, functions as a honeypot gathering data on API requests; they are entirely different.
+Pasithea is intended to help investigate multiple types of attacks.  In particular, we observed and analyzed a distributed denial of service (DDoS) flood and the attempted use of cross-site scripting (XSS) commands. In a DDoS attack, an attacker floods a network or service with information or requests in an attempt to exhaust some finite system resource such as memory \cite{DoS-Def}. The goal of a DDoS attack varies, but it is most commonly intended to disrupt legitimate users from accessing information or services provided by the network.
 
-The XSS attack and a denial-of-service (DoS) attack on the G* REST API prompted us to create Pasithea. In a DoS attack, an attacker ‘floods’ a network or service with information or requests \cite{DoS-Def}. The goal of a DoS attack varies, but it is most commonly intended to disrupt legitimate users from accessing information or services provided by the network. The DoS attack on G* lasted from May 25, 2017 until June 01, 2017, creating over 275,000,000 log entries. During this time, the requests per second (R/s) steadily rose, starting at 500 R/s and ending at 6000 R/s. Perhaps an unintended side effect, the log file grew to over 18,022,141,952 bytes (18 Gigabytes) until the G* Graph Database ran out of storage on its cloud hosted server. The requests received during the DoS attack all contained the command type ‘HEAD’ and the command text ‘home’. Figure 1 displays a hive plot of a simple random sample of 150 points of data collected by the G* Graph Database logs, and Figure 2 highlights the outlying requests that did not use the command type GET. Both graphs show the volume of requests marked against timestamp, and it is important to note that the varying request types all occurred within the same timeframe.
+The DDoS attack on GStar lasted from May 25, 2017 until June 01, 2017, creating over 275,000,000 log entries. During this time, the requests per second (R/s) steadily rose, starting at 500 R/s and peaking at over 6000 R/s. Perhaps as an unintended side effect, the log file grew to over 18,022,141,952 bytes (18 Gigabytes) until the GStar Graph Database ran out of storage on its cloud hosted server. The requests received during the DDoS attack all contained the command type HEAD and the command text 'home'.
+
+We gathered a simple random sample of 150 requests collected by the GStar logs between February 06, 2017 and May 25, 2017.  This data was then inserted into a hive plot to visualize and better interpret the attack. Hive plots are a perceptually uniform, scalable visualization for network analytics \cite{Hive-Plot}.  We use a four axis graph to visualize the relationships between timestamp, data source, command type, and response message (as shown in Fig. 1). The timestamp axis is the most heavily populated, containing distinct plotted points for each second during which a log entry was created. The source and message axes are closely related because there is only one plotted point on each axis. Source is the source of the response or message returned by the GStar Graph Database, and message is the response itself. In the context of the log file analyzed, the source is always 'back-end' and message is always 'Unknown command:'. Lastly, the plotted points on the command type axis delineate unique HTTP request methods such as GET, POST, HEAD, PUT, DELETE, etc.
+
+Fig. \ref{fig:regHive} displays all 150 requests, while Fig. \ref{fig:uniqHive} highlights the outlying requests from Fig. \ref{fig:regHive} that did not use the command type GET.  Rather, these requests used the command types POST and HEAD. The POST requests are shown as the plotted point second closest to the center of the axis, while the HEAD requests are the farthest plotted point from the center of the axis. Fig. \ref{fig:uniqHive} represents requests that used methods not commonly employed by web browsers or web crawlers, the two most frequent sources of unwanted requests found in data gathered by Pasithea. This suggests these requests were deliberate and potentially malicious in nature.
+
+Cross-site scripting attacks are a type of injection where malicious scripts are injected into an otherwise benign or trusted website \cite{XSS-def}. Further investigation of the specific commands being attempted as an XSS attack revealed the following:
+
+\noindent GET cgi\\
+POST command.php\\
+GET ;rm\$IFS-f\$IFS’\\
+GET ;wget\$IFS-O\$IFS’\\
+GET ;chmod\$IFS’777’\$IFS’\\
+GET ;sh\$IFS-c\$IFS‘
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=2.5in]{images/regHive.png} 
-\caption{-- Hive plot displaying a simple random sample of 150 points from the G* Graph Database logs.}
+\caption{-- Hive plot displaying a simple random sample of 150 points from the GStar Graph Database logs. Data sampled is from Feb 06, 2017 - May 25, 2017}
+\label{fig:regHive}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=2.5in]{images/uniqHive.png} 
-\caption{-- Hive plot where the prominent nodes in the figure denote 'injections' into the G* Graph Database API that differ from normal traffic.}
+\caption{-- Hive plot where the prominent nodes in the figure denote 'injections' into the GStar Graph Database that differ from normal traffic. Data sampled is from Feb 06, 2017 - May 25, 2017}
+\label{fig:uniqHive}
 \end{figure}
 
+\noindent Fig. \ref{fig:XSS} displays a selected sample collected by the GStar logs between March 11, 2017 and March 16, 2017 in a hive plot. The highlighted requests range a span of 25 seconds where the XSS commands were attempted, starting with GET cgi and ending with GET ;sh\$IFS-c\$IFS'. This shows both the short amount of time it took to run this malware insertion, and the use of GET and POST request methods for one attack.
 
-Cross-site scripting attacks are a type of injection where malicious scripts are injected into an otherwise benign or trusted website \cite{XSS-Def}. The XSS attempt logged by the G* Graph Database contained the following commands: GET cgi, POST command.php, GET ;rm\$IFS-f\$IFS’, ;wget\$IFS-O\$IFS’, ;chmod\$IFS’777’\$IFS’, ;sh\$IFS-c\$IFS‘. These commands were also documented by a Finnish cyber-security company named F-Secure \cite{F-Secure}. The commands attempted with the XSS attack are intended to upload a PHP: Hypertext Preprocessor (PHP) file, then send a series of commands that, if executed, would remove a file using the \$IFS variable found in the PHP file. After, it would attempt to download a file with the same variable name, change the permissions on said file so it is able to be executed by any user, then subsequently execute the file. F-Secure’s research into a similar, perhaps the same, attack led them to believe their honeypot was targeted by a Peer to Peer (P2P) botnet named “TheMoon” \cite{TheMoon}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{images/XSS.png} 
+\caption{-- Hive plot where the prominent nodes in the figure display the XSS attempt on the GStar Graph Database. Data sampled is from Mar 11, 2017 - Mar 16, 2017}
+\label{fig:XSS}
+\end{figure}
 
-Pasithea currently resides in Ashburn, Virginia on an Amazon Web Services (AWS) EC2 instance. Though currently active, Pasithea has only been operational for three weeks, so we do not have any substantial data or attacks to present. Our log files indicate cursory web crawls from Baidu, a Chinese search engine, and some attempts at exploiting a known vulnerability in insecure or improperly set up tomcat web servers using GET /manager/html \cite{Tomcat-Exploit}.
+We determined that a very similar attack sequence was also recently documented by a Finnish cyber-security company named F-Secure \cite{F-Secure}. The commands attempted with the XSS attack are intended to upload a PHP: Hypertext Preprocessor (PHP) file, then send a series of commands that, if executed, would remove a file using the \$IFS variable found in the PHP. Afterwards, it would attempt to download a file with the same variable name and change the permissions on said file so that it can be executed by any user.  Then the attacker subsequently executes the file. Researchers from F-Secure  attribute this attack profile to a Peer to Peer (P2P) botnet named TheMoon \cite{TheMoon}. This example illustrates how we can use data collected from attack attempts to isolate and attribute the attack, provided that we can determine what types of attacks are taking place.
+
+Pasithea was subsequently deployed, and is currently active, on an Amazon Web Services (AWS) EC2 instance in Ashburn, Virginia. Our log files indicate cursory web crawls from Baidu, a Chinese search engine, and some attempts at exploiting a known vulnerability in tomcat web servers using GET /manager/html \cite{Tomcat-Exploit}. We continue to monitor this instance, and additional results will be reported in a future paper.
 
 \section{Construction}
 \label{construct}
-We constructed Pasithea using Java, a common server side programming language, and  NanoHTTPD \cite{Nanohttpd}, a lightweight HTTP library that receives HTTP requests and returns responses. Implementing this kind of functionality enables Pasithea to simulate a real server. It accepts any kind of request, regardless of the HTTP method, URL requested, or request body. Pasithea then logs the current time, the HTTP method, the path the client attempted to access, e.g. /index.html, the client’s IP address, and the user agent information. Clients always receive a $<$h1$>$404 Not Found$<$/h1$>$ response, regardless of which resource they attempt to access. 
+We constructed Pasithea using Java, a common server side programming language, and NanoHTTPD \cite{Nanohttpd}, a lightweight HTTP library that receives HTTP requests and returns responses.  Implementing this kind of functionality enables Pasithea to simulate a real application server. It accepts any kind of request, regardless of the HTTP method, URL requested, or request body. Pasithea then logs the current time, the HTTP method, the path the client attempted to access, e.g. /index.html, the clients IP address, and the user agent information. Clients always receive a $<$h1$>$404 Not Found$<$/h1$>$ response, regardless of which resource they attempt to access.
 
-Using the free “micro” tier available to students, we are able to host this honeypot on an AWS EC2 instance. The team chose AWS both because of its appealing free tier model, and because we are familiar with the security policies and standards that Amazon sets in place. We modified those default security measures within the AWS instance to enable access to the port that the API honeypot resides on. Pasithea is currently indexed on Shodan, a web search engine that indexes “Internet-connected devices.” Shodan is known for being frequented by hackers and other unsavory characters\cite{unsavoryChar}.
+We are able to host this honeypot on an AWS EC2 instance using the free micro tier. We chose AWS both because of its appealing free tier model and because we are familiar with the security policies and standards that Amazon sets in place. We modified those default security measures within the AWS instance to enable access to the port hosting the API honeypot. Pasithea is currently indexed on Shodan, a web search engine that indexes Internetconnected devices. Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additional data \cite{unsavoryChar}.
 
 \section{Performance Tests}
 \label{performance}
-Performance testing is a critical part of development, so it is important to demonstrate Pasithea’s performance under different loads and its ability to log many, potentially thousands, of incoming requests in a short amount of time. In other words, it must respond fast enough to keep malicious users interested while also being stable enough to receive high volumes of incoming requests. To do this, we ran a series of benchmarks using the Apache Bench \cite{ab} tool (ab). This tool allows us to designate a number of completed requests to attempt to send to our API honeypot and vary the number of simulated concurrent users sending these requests. The results from these tests are displayed below in Figures 3 and 4. We researched a baseline response time for a RESTful API to give this data appropriate context. In doing so, we discovered a number of varying contexts. The most promising are two separate internal tests from software development and web monitoring companies, 3PillarGlobal \cite{3Pillar} and Site24x7 \cite{site24x7}. Paired with some research on the human perception of performance \cite{performance}, we concluded that a 300ms response time is expected under normal traffic conditions. The data Pasithea collected indicates that we fall well within this range given a concurrency level of 500. In addition, we continued tests at much higher concurrency levels to assess how well Pasithea would perform under extreme stress, like the attempts we saw on G*’s API. Pasithea can, with time, handle a concurrency level over 9000 while still logging more than 90\% of the requests received.
+Performance testing is a critical part of development, so it is important to demonstrate Pasitheas performance under different loads and its ability to log many, potentially thousands, of incoming requests in a short amount of time. In other words, it must respond fast enough to keep malicious users interested while also being stable enough to receive high volumes of incoming requests. To do this, we ran a series of benchmarks using the Apache Bench (ab) tool \cite{ab}. This tool allows us to designate a number of completed requests to be sent to our API honeypot while varying the number of simulated concurrent users. The results from these tests are displayed in Fig. \ref{fig:R/s} and Fig. \ref{fig:T/R}. We researched a baseline response time for a RESTful API to give this data appropriate context. In doing so, we discovered two separate internal tests from software development and web monitoring companies, 3PillarGlobal \cite{3Pillar} and Site24x7 \cite{site24x7}. Paired with some research on the human perception of performance \cite{performance}, we concluded that a 300-ms response time is expected under normal traffic conditions in order for the API honeypot to appear realistic. The data Pasithea collected indicates that we fall well within this range given a concurrency level of 500. In addition, we continued tests at much higher concurrency levels to assess how well Pasithea would perform under extreme stress, like the attempts we saw on the GStar API. Pasithea can, with time, handle a concurrency level over 9000 while still logging more than 90\% of the requests received.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=2.5in]{images/RequestsperSecond.png} 
 \caption{-- Requests processed per second by Pasithea at varying concurrency levels.}
+\label{fig:R/s}
 \end{figure}
 
-We have yet to push Pasithea to its limits, at which point it would be unable to handle a significant amount of requests. Pasithea hits a  request per second plateau at a concurrency level of 1000, but continues to perform well at 9000. With enough storage space, the team believes that Pasithea could withstand another substantial attack, such as the one seen on the G* graph database and be able to log information about the attack.
-
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=2.5in]{images/TimeperRequest.png} 
 \caption{-- Mean time taken to complete a single request on Pasithea at varying concurrency levels.}
+\label{fig:T/R}
 \end{figure}
+
+Since our implementation of request/response for Pasithea was deliberately kept very simple (only responding with 404 errors), we have thus far been unsuccessful in driving Pasithea hard enough during performance testing to reach a point where it is unable to handle a significant amount of requests.  Pasithea hits a R/s plateau at a concurrency level of 1000, but continues to perform well at 9000. With enough storage space, we believe that Pasithea could withstand a substantial attack, such as the one seen on the GStar Graph Database, and be able to log information about the attack for further analysis.
 
 \section{Conclusion}
 \label{conclusion}
-The API security landscape resembles more of a Wild West of missing standards, rather than a safe, civilized, city of consistency. This has led to an influx of attacks directed at APIs on all fronts. Based on the attacks targeting the G* Graph Database and our research into related attacks, we have constructed an API honeypot, Pasithea, with Java and NanoHTTPD to help combat and detail future attacks on the API landscape. 
-
-Performance data states that Pasithea should be able to keep a malicious user interested with fast response times, while also maintaining composure and stability under high traffic loads
-
-Ultimately, we aim to implement Pasithea into our SecureCloud test suite and elsewhere in an effort to lure attackers. In doing so, we will develop accurate API attack profiles which will help shape the future of API security.
-
-NOTE: The below REFERENCES section is a WiP. It is not properly formatted but does contain relevant links to each citation. We believe that this section will change after edits to the draft so we have not focused our efforts on this.
-
-
-
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
-
+The API security landscape resembles more of a Wild West of missing standards, rather than a safe, civilized, city of consistency. This has led to an influx of attacks directed at APIs on many  fronts. Based on the attacks targeting the GStar Graph Database and our research into related attacks, we have constructed an API honeypot, Pasithea, with Java and NanoHTTPD to help combat and detail future attacks on the API landscape. Using hive plots and other tools, we have analyzed a real-world attack on the GStar database, demonstrating how DDoS and XSS attacks can be uncovered and attributed so that a proportionate defense may be deployed.  Our performance data suggests that Pasithea should be able to keep a malicious user interested with fast response times, while also maintaining composure and stability under high traffic loads. This allows us to develop accurate API attack profiles which will help shape the future of API security.
 
 % use section* for acknowledgement
-%\section*{Acknowledgment}
-
-
-
+\section*{Acknowledgment}
+\label{Acknowledgements}
+The authors would like to thank D. Edile and T. Famularo for their contribution in analyzing the data gathered from the GStar Graph Database.  M. A. Hoffmann and J. Heiles for reviewing the paper and giving their thoughts from an outside perspective. And T. Magnusson for his help constructing Pasithea, as well as reviewing and suggesting edits to the many drafts of this paper.
 
 
 % Can use something like this to put references on a page
@@ -632,15 +501,6 @@ NOTE: The below REFERENCES section is a WiP. It is not properly formatted but do
   \newpage
 \fi
 
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
 
 % references section
 
@@ -656,41 +516,9 @@ NOTE: The below REFERENCES section is a WiP. It is not properly formatted but do
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-\bibitem{REST-API-use}
-Cogan, Daniel R., "REpresentational State Transfer in the Modern Internet" (2016). CMC Senior Theses. 1387. 
-\url{http://scholarship.claremont.edu/cmc_theses/1387}
-\bibitem{Nissan-Leaf}
-\url{https://www.troyhunt.com/controlling-vehicle-features-of-nissan/}
-\bibitem{IRS}
-\url{https://apnews.com/34539a748b3745ffb92451472f814ffa/apnewsbreak-irs-says-thieves-stole-tax-info-100000}
-\bibitem{honeypot-Def}
-\url{https://www.sans.org/security-resources/idfaq/what-is-a-honeypot/1/9}
-\bibitem{DoS-Def}
-\url{https://www.us-cert.gov/ncas/tips/ST04-015}
-\bibitem{XSS-Def}
-\url{https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)}
-\bibitem{F-Secure}
-\url{http://branden.biz/wp-content/uploads/2017/02/cyber-security-report-2017.pdf}
-\bibitem{TheMoon}
-\url{https://blog.fortinet.com/2016/10/20/themoon-a-p2p-botnet-targeting-home-routers}
-\bibitem{Tomcat-Exploit}
-\url{http://blog.opensecurityresearch.com/2012/09/manually-exploiting-tomcat-manager.html}
-\bibitem{Nanohttpd}
-\url{https://github.com/Nanohttpd/nanohttpd}
-\bibitem{unsavoryChar}
-\url{https://www.cybrary.it/0p3n/intro-shodan-search-engine-hackers/}
-\bibitem{ab}
-\url{https://httpd.apache.org/docs/2.4/programs/ab.html}
-\bibitem{3Pillar}
-\url{https://www.3pillarglobal.com/insights/performance-testing-of-a-restful-api-using-jmeter}
-\bibitem{site24x7}
-\url{https://www.site24x7.com/help/performance-metrics/rest-api.html}
-\bibitem{performance}
-\url{https://www.smashingmagazine.com/2015/09/why-performance-matters-the-perception-of-time/}
+\bibliographystyle{ieeetran}
+\bibliography{bibliography}{}
 
-
-\end{thebibliography}
 
 % biography section
 % 
@@ -703,9 +531,11 @@ Cogan, Daniel R., "REpresentational State Transfer in the Modern Internet" (2016
 %\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
+
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{picture}}]{John %Doe}
 %\blindtext
 %\end{IEEEbiography}
+
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
@@ -713,16 +543,13 @@ Cogan, Daniel R., "REpresentational State Transfer in the Modern Internet" (2016
 % on the last page and whether or not the columns
 % are being equalized.
 
+
 %\vfill
+
 
 % Can be used to pull up biographies so that the bottom of the last one
 % is flush with the other column.
 %\enlargethispage{-5in}
-
-
-
-
 % that's all folks
 \end{document}
-
 
