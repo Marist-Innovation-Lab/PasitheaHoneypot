@@ -6,9 +6,12 @@ Not long after making G-Star Studio available online, we observed a number of un
 These attacks specifically targeted G-star Studio's REpresentational State Transfer (REST) API.
 
 A REST API is among the most commonly used API architectures today~\cite{REST-API-use}.
-There are many examples of recent attacks against REST APIs, including well-publicized attacks on the Nissan Leaf smart car~\cite{Nissan-Leaf} and the Internal Revenue Service database~\cite{IRS}.  
+There are many examples of recent attacks against REST APIs, including well-publicized attacks on the Nissan Leaf smart car
+%~\cite{Nissan-Leaf} 
+and the Internal Revenue Service database.
+%~\cite{IRS}.  
 Existing APIs do not always follow security best practices, and developers might be lulled into a false sense of security by believing that their API will not be an attack target.  
-In an effort to improve the security of our system and other REST APIs as well, we felt it would be advantageous to create a profile of these attacks so we developed a low-interaction API honeypot do just that.
+In an effort to improve the security of our system and other REST APIs as well, we felt it would be advantageous to create a profile of these attacks so we developed a low-interaction API honeypot to do just that.
 
 %% Should we differentiate between low-interaction and high-interaction honeypots?
 
@@ -18,13 +21,15 @@ Since our defensive response improves as we collect more data, we can effectivel
 Because our original REST API was not designed to comprehensively log attack data, we only captured timestamp, source IP address, command type, and command text from the initial attacks.  
 Addressing these shortcomings, we created a new API honeypot, named Pasithea (the Greek goddess of rest), capable of creating an attack profile that includes the user agent, the IP address, and other information extracted from the G-star API.
 Data gathered by Pasithea helps us determine where attacks are coming from, how they can be classified, and what can be done to defend against such attacks.  
-Pasithea has been deployed online and the data it collects (as well as data from other sources) have been integrated into our NSF {\em SecureCloud} test environment.  
-
-Our honeypot enables security experts to analyze and develop remedies for emerging attacks, to avoid falling into framework-complacency.  
-While various types of honeypots have existed for some time~\cite{Stoll:1989:CET:67554,Provos:2004:VHF:1251375.1251376}, and many security projects use APIs to make their data more easily consumable~\cite{Graham:2008:FAD:1355323,SCADA-Testbed-API}, the use of a REST API {\em itself} to attract malicious traffic and collect attack data does not appear to have been previously studied.\footnote{  
+Pasithea has been deployed online and the data it collects (as well as data from other sources) have been integrated into our NSF {\em SecureCloud} test environment.\footnote{  
 It is important to note a potential source of confusion regarding the terms ``API'' and `` honeypot''. 
 Honeypot APIs, though similar in name, are not to be confused with Pasithea, which is an API honeypot. 
 A honeypot API is an API made to interface with a specific honeypot (like an SSH honeypot or an SDN honeypot), returning useful data or executing certain methods specified by the request~\cite{Honeypot-API}. 
 An API honeypot (such as Pasithea) on the other hand, is entirely different; it functions as a proper honeypot itself by gathering data on unauthorized API requests.  
-This type of API honeypot represents a novel approach to attack analysis that will hopefully lead to the development of more secure and robust APIs for cloud-based applications.}
+This type of API honeypot represents a novel approach to attack analysis that will hopefully lead to the development of more secure and robust APIs for cloud-based applications.}  
+
+Our honeypot enables security experts to analyze and develop remedies for emerging attacks, to avoid falling into framework-complacency.  
+While various types of honeypots have existed for some time~\cite{Stoll:1989:CET:67554,Provos:2004:VHF:1251375.1251376}, and many security projects use APIs to make their data more easily consumable,
+%~\cite{Graham:2008:FAD:1355323,SCADA-Testbed-API}, 
+the use of a REST API {\em itself} to attract malicious traffic and collect attack data does not appear to have been previously studied.
 
