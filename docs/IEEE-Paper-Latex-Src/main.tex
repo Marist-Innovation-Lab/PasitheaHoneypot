@@ -119,16 +119,17 @@ Poughkeepsie, NY 12601\\
 
 
 \begin{abstract}
-Honeypots are systems built to mimic critical parts of a network, distracting attackers while logging their information to develop attack profiles. 
+Honeypots are servers or systems built to mimic critical parts of a network, distracting attackers while logging their information to develop attack profiles. 
 This paper discusses the design and implementation of a honeypot disguised as a REpresentational State Transfer (REST) Application Programming Interface (API). 
-This honeypot has been deployed as part of our NSF-sponsored SecureCloud test bed.  
-We discuss the motivation for this work, design features of the honeypot, and experimental data showing performance under various traffic conditions.  
-We also present some analysis of both a distributed denial of service (DDoS) attack and cross-site scripting (XSS) malware insertion against this honeypot.
+% This honeypot has been deployed as part of our NSF-sponsored SecureCloud test bed.  
+We discuss the motivation for this work, design features of the honeypot, and experimental performance results under various traffic conditions.  
+We also present an analysis of both a distributed denial of service (DDoS) attack and a cross-site scripting (XSS) malware insertion against this honeypot.
 \end{abstract}
 
 \input{introduction}
-\input{analysis}
+\input{background}
 \input{construction}
+\input{analysis}
 \input{performance}
 \input{conclusions}
 

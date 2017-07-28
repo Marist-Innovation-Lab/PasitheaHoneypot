@@ -2,40 +2,26 @@
 
 \section{Introduction} \label{intro}
 
-In recent years, the number and severity of cyber attacks has grown significantly~\cite{Symantec-Threat-Report,IBM-XForce-Report}. 
-Attackers have managed to pull off virtual bank heists, distributed denial of service (DDoS) attacks powered by botnets and Internet of Things (IoT) devices, and even malware-caused power outages~\cite{IBM-XForce-Report}. 
-Our National Science Foundation (NSF) sponsored SecureCloud test bed aims to combat the growing number of cyber-attacks against cloud networks using an autonomic, zero trust environment~\cite{7796146}.  
-Our most recent implementation utilizes new software developed for use in an {\textbf O}bserve {\textbf O}rient {\textbf D}ecide {\textbf A}ct (OODA) control plane.
+The number and severity of cyber attacks has grown significantly in recent years~\cite{Symantec-Threat-Report,IBM-XForce-Report}. 
+Attackers have managed to pull off virtual bank heists, distributed denial of service (DDoS) attacks powered by botnets and Internet of Things (IoT) devices, and even power outages caused by malware~\cite{IBM-XForce-Report}. 
+Our National Science Foundation (NSF)--sponsored {\em SecureCloud} test bed aims to combat the growing number of cyber attacks against cloud networks using an autonomic, zero trust environment~\cite{7796146}.  
 
-Part of this system uses G-star, the Dynamic Graph Database~\cite{GStar} to organize, visualize, and analyze data. 
-G-star, interoperating with the PostgreSQL object relational database, allows us to perform graph theoretical analysis and relational queries on cyber-attack data.  
-After making our initial work available online, we observed a number of unauthorized connection attempts to the G-star Application Programming Interface (API).  
-These attacks specifically targeted G-star's REpresentational State Transfer (REST) API.
+Our recent {\em SecureCloud} test bed implementation utilizes new software developed for use in an {\textbf O}bserve {\textbf O}rient {\textbf D}ecide {\textbf A}ct (OODA) control plane~\cite{something for OODA}.
+Part of this system uses G-star, the Dynamic Graph Database~\cite{Labouseur-DAPD-2015} to organize, visualize, and analyze cyber attack data. 
+G-star, interoperating with the PostgreSQL object relational database through G-star Studio~\cite{inroads-Labouseur16}, allows us to perform graph theoretical analysis and relational queries on cyber-attack data.  
 
-A REST API is among the most commonly used API architectures today~\cite{REST-API-use}.
-There are many examples of recent attacks against REST APIs, including well publicized attacks on the Nissan Leaf smart car~\cite{Nissan-Leaf} and the Internal Revenue Service database~\cite{IRS}.  
-Existing APIs often do not follow security best practices, and developers can be lulled into a false sense of security by believing that their API will not be an attack target.  
-In an effort to improve the security of our system and other REST APIs, we felt it would be advantageous to create a profile of these attacks.
-
-To accomplish this, we created a low-interaction API honeypot to collect data on these attacks.
-Honeypots are servers or systems built and deployed to mimic critical parts of a network, effectively distracting attackers and logging attack information in the process~\cite{honeypot-Def}.
-Disguising a honeypot as an API allows us to analyze and understand attack patterns.
-Since our defensive response improves as we collect more data, we can effectively use the attackers' strengths against them; the more times our honeypot is attacked, the better our defense posture can become.  
-Since our original REST API was not designed to comprehensively log attack data, we only captured timestamp, source IP, command type, and command text for the initial attacks.  
-To address these shortcomings, we created a new API honeypot, named Pasithea (the Greek goddess of rest), capable of creating an attack profile that includes the user agent, the IP address, and other information extracted from the G-star API.
-
-The data Pasithea gathers can help us determine where attacks are coming from, how they can be classified, and what can be done to defend against such attacks.  
-Pasithea has been deployed online, and data collected from it and other sources will be integrated into the NSF SecureCloud test bed project.  
-Our honeypot enables security experts to analyze and develop remedies for emerging attacks, to avoid falling into framework-complacency.  
-While various types of honeypots have existed for some time~\cite{Stoll:1989:CET:67554,Provos:2004:VHF:1251375.1251376}, and many security projects use APIs to make their data more easily consumable~\cite{Graham:2008:FAD:1355323,SCADA-Testbed-API}, the use of a REST API {\em itself} to attract malicious traffic and collect attack data does not appear to have been previously studied.\footnote{  
-It is important to note a potential source of confusion regarding API honeypots. 
-Honeypot APIs, though similar in name, are not to be confused with Pasithea, which is an API honeypot. 
-A honeypot API is an API made to interface with a specific honeypot, returning useful data or executing certain methods specified by the request~\cite{Honeypot-API}. 
-An API honeypot (such as Pasithea) on the other hand, is entirely different; it functions as a proper honeypot by gathering data on unauthorized API requests.  
-This type of API honeypot represents a novel approach to attack analysis that will hopefully lead to the development of more secure and robust APIs for cloud-based applications.}
+Key contributions of this work include the following:
+\begin{itemize}
+   \item introduces the idea of an API honeypot
+   \item describes a reference implementation of an API honeypot
+   \item demonstrates DDoS and malware API attack analysis using graph and relational tools
+   \item discusses performance characteristics of our API honeypot
+   \item shows how we enable security experts to analyze data and develop remedies for emerging API attacks  
+\end{itemize}
 
 The remainder of this paper is organized as follows: 
+Section~\ref{background} introduces the idea of an API honeypot. 
+Section~\ref{construction} describes the software design and features of our API honeypot, Pasithea. 
 Section~\ref{analysis} presents the analysis of the data received from both the initial G-star REST API logs and current data collected by Pasithea. 
-Section~\ref{construction} describes the software design and features of Pasithea. 
 Section~\ref{performance} presents the results from performance testing against Pasithea.
 Lastly, Section~\ref{conclusions} includes a discussion of our initial conclusions and plans for future work.
