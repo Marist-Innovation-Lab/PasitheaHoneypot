@@ -3,7 +3,7 @@
 \section{Construction Principles} \label{construction}
 
 We developed Pasithea using Java, a common server-side programming language, and NanoHTTPD \cite{Nanohttpd}, a lightweight HTTP library written in Java that receives HTTP requests and returns responses.
-Implementing this kind of functionality in this way enables Pasithea to simulate a real application server in a lightweight and independent manner. 
+Implementing this kind of functionality enables Pasithea to simulate a real application server in a lightweight and independent manner. 
 It accepts any kind of request, regardless of the HTTP method, URI requested, or request body. 
 Pasithea then logs the current time, the HTTP method, the path the client attempted to access, (e.g. /index.html), the client's IP address, and the user agent data. 
 Clients always receive a
@@ -26,8 +26,8 @@ The consistent 404 response is what makes Pasithea an unidentifiable, low-intera
 It is indistinguishable from a normal HTTP server whose valid URIs attackers do not know. 
 %% In the future, we aim to extend Pasithea’s REST interface to extract more data from attackers while maintaining its cover as an unidentifiable API honeypot.
 
-We are hosting our honeypot on an Amazon Web Services Elastic Compute Cloud (AWS EC2) instance using their ``free micro'' tier. 
+We are hosting our honeypot on an Amazon Web Services Elastic Compute Cloud (AWS EC2) instance using its ``free micro'' tier. 
 We chose AWS both because of its appealing free tier model and because we were familiar with the security policies and standards that Amazon sets in place. 
 We modified those default security policies within our AWS instance to enable access to the port hosting our API honeypot. 
 Pasithea is currently indexed on Shodan~\cite{unsavoryChar}, a web search engine that indexes internetconnected devices.
-Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additional data.
+Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additiona attackl data.
