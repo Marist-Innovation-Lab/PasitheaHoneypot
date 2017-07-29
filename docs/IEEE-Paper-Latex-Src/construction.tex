@@ -11,7 +11,7 @@ Clients always receive a
 % \texttt{<h1>404 Not Found</h1>}
 % That's not working. Too bad.
 
-\begin{center}
+\begin{center}  %% maybe \texttt ?
 $<$h1$>$404 Not Found$<$/h1$>$ 
 \end{center}
 
@@ -30,4 +30,4 @@ We are hosting our honeypot on an Amazon Web Services Elastic Compute Cloud (AWS
 We chose AWS both because of its appealing free tier model and because we were familiar with the security policies and standards that Amazon sets in place. 
 We modified those default security policies within our AWS instance to enable access to the port hosting our API honeypot. 
 Pasithea is currently indexed on Shodan~\cite{unsavoryChar}, a web search engine that indexes internetconnected devices.
-Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additiona attackl data.
+Shodan is known for being frequented by the hacker community, making it likely that we will be able to collect additional attack data.

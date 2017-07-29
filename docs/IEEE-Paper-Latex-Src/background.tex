@@ -7,18 +7,19 @@ These attacks specifically targeted G-star Studio's REpresentational State Trans
 
 A REST API is among the most commonly used API architectures today~\cite{REST-API-use}.
 There are many examples of recent attacks against REST APIs, including well-publicized attacks on the Nissan Leaf smart car
-%~\cite{Nissan-Leaf} 
+~\cite{Nissan-Leaf} 
 and the Internal Revenue Service database.
-%~\cite{IRS}.  why are these removed? weak sources or are they unnesscary?
+% ~\cite{IRS}.  removed for space considerations  
 Existing APIs do not always follow security best practices, and developers might be lulled into a false sense of security by believing that their API will not be an attack target.  
-In an effort to improve the security of our system and other REST APIs, we felt it would be advantageous to create a profile of these attacks, so we developed a low-interaction API honeypot.
+In an effort to improve the security of our {\em SecureCloud} system and other REST APIs, we felt it would be advantageous to create a profile of these attacks, so we developed a low-interaction API honeypot.
 
 %% Should we differentiate between low-interaction and high-interaction honeypots? It's probably fine as is, the concept is fairly self explanitory and if needed we can expand more in our Conclusions and Future Work section.
 
 Honeypots are servers or systems that mimic critical parts of a network, effectively distracting attackers and logging attack information in the process~\cite{honeypot-Def}.
 Disguising a honeypot as an API allows us to analyze and understand API attack patterns.
 Since our defensive responses improve as we collect more data, we can effectively use the attackers' strengths against them; the more our honeypot is attacked, the better our defense posture can become.
-Because our original REST API was not designed to comprehensively log attack data, we only captured timestamp, source IP address, command type, and command text from the initial attacks.  
+
+Because our original REST API was not designed to comprehensively log attack data, we only captured timestamp, command type, and command text from the initial attacks.  
 Addressing these shortcomings, we created a new API honeypot, named Pasithea (the Greek goddess of rest), capable of creating an attack profile that includes the user agent, the IP address, and other information extracted from the G-star API.
 Data gathered by Pasithea helps us determine where attacks are coming from, how they can be classified, and what can be done to defend against such attacks.  
 Pasithea has been deployed online and the data it collects (as well as data from other sources) have been integrated into our NSF {\em SecureCloud} test environment.\footnote{  
