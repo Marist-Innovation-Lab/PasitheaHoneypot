@@ -30,5 +30,5 @@ Pasithea can, with time, handle a concurrency level of over 9000 simultaneous re
 \end{figure}
 
 Since our implementation of request/response for Pasithea was deliberately kept very simple (only responding with 404 errors), we have thus far been unsuccessful in driving Pasithea hard enough during performance testing to reach a point where it is unable to handle a significant amount of requests.  
-Pasithea hits a $R/s$ plateau at a concurrency level of 1000, see Fig.~\ref{fig:R/s} but continues to perform well at 9000.
+Pasithea hits a $R/s$ plateau at a concurrency level of 1000 (see Fig.~\ref{fig:R/s}), but continues to perform well at 9000.
 With enough storage space, we believe that Pasithea could withstand a substantial attack, such as the one seen on G-star, and be able to log information about the attack for analysis.
