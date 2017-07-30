@@ -21,7 +21,7 @@ The requests received during the DDoS attack all contained the command type $HEA
 
 %% When citing figures in text IEEE wants them to be referenced as 'Fig. x' rather than Figure x
 %% Okay.
-We gathered a simple random sample of 150 requests collected by the G-star logs between February 6, 2017 and May 25, 2017.  
+We gathered a simple random sample of 150 requests collected by the G-star logs between February 6, 2017 and May 25, 2017 (a period covering normal operations and the attack).
 This data was then rendered into a Hive plot~\cite{Hive-Plot} to interpret the attack. 
 Hive plots are a perceptually uniform, scalable visualization for network analytics.  
 We used a four-axis graph to reflect the relationships among timestamp, data source, command type, and response message (Fig.~\ref{fig:regHive}). 
@@ -56,7 +56,7 @@ GET ;sh\$IFS-c\$IFS‘'}
 
 \noindent Fig. \ref{fig:XSS} displays a selected sample of entries collected by the G-star logs between March 11, 2017 and March 16, 2017. 
 The highlighted requests have a span of 25 seconds where the XSS commands were attempted.
-This shows both the short amount of time it took to run this malware insertion and the use of GET and POST request methods for one attack.
+This shows both the short amount of time it took to run this malware insertion attempt and the use of GET and POST request methods for one attack.
 
 We determined that a very similar attack sequence was also recently documented by a Finnish cyber-security company F-Secure~\cite{F-Secure}. 
 The commands attempted with the XSS attack are intended to upload a PHP: Hypertext Preprocessor (PHP) file, then send a series of commands that, if executed, would remove a file using the \$IFS variable found in PHP. 

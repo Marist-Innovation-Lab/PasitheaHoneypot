@@ -18,7 +18,7 @@ Clients always receive a
 \noindent
 response, regardless of which resource they attempt to access.
 
-In order to ensure attackers do not fingerprint Pasithea as a honeypot, we modeled our honeypot API after G-star Studio's ``real'' API.\footnote{
+In order to ensure attackers do not fingerprint Pasithea as a honeypot, we modeled our API honeypot after G-star Studio's ``real'' API.\footnote{
 Please refer to the {\em ACM Inroads} article on G-star Studio~\cite{inroads-Labouseur16} for technical details about developing a Java-based REST API.
 } 
 But Pasithea always returns a 404 error, while G-star Studio, when prompted with a valid request, will return JSON-formatted data. 
