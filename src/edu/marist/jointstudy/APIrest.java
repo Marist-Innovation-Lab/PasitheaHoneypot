@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.util.*;
+import java.lang.*;
 
 /* Consider adding a logger in this manner.
 import java.util.logging.Level;
@@ -41,8 +42,8 @@ public class APIrest extends NanoHTTPD {
 
    public static final String apiVersion = "0.01";
    public static final String apiName    = "SecureCloud REST API Honeypot version " + apiVersion;
-   public static final int    apiPort    = 8080;
-
+   public static final int    apiPort    = 8082;
+   public static final String HPID       = System.getenv("HPID");
    public APIrest() {
       super(apiPort);  // call the NanoHTTPD constructor.
       try {
@@ -57,6 +58,7 @@ public class APIrest extends NanoHTTPD {
    public static void main(String[] args) throws Exception {
       System.out.println("Welcome to the " + apiName +".");
       Runtime rt = Runtime.getRuntime();
+      System.out.println("HoneypotID: " + HPID);
       System.out.println(" Running on port: " + apiPort);
       System.out.print(" JVM says Processors:" + rt.availableProcessors());
       System.out.print("  Total memory:" + java.text.NumberFormat.getNumberInstance(java.util.Locale.US).format(rt.totalMemory()));
@@ -132,7 +134,7 @@ public class APIrest extends NanoHTTPD {
       System.out.println("API received command: " + requestText + " from " + fromIP);
 
       // Make a log entry.
-      String msg = method.toString() + "~" + requestText + "~" + fromIP + "~" + userAgent;
+      String msg = HPID  + "~" + method.toString() + "~" + requestText + "~" + fromIP + "~" + userAgent;
       writeLog(msg);
 
       // Return the response.
