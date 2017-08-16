@@ -101,8 +101,12 @@ echo -e "Compiling the java file..."
 javac -cp ../lib/gson-2.2.2.jar:../lib/nanohttpd-2.2.0.jar:../nanohttpd-webserver-2.2.0.jar edu/marist/jointstudy/APIrest.java
 #run the compiled program
 echo -e "Starting up the APIhp..."
-echo "#!/bin/bash
-java -cp .:../lib/gson-2.2.2.jar:../lib/nanohttpd-2.2.0.jar:../nanohttpd-webserver-2.2.0.jar edu.marist.jointstudy.APIrest" >> runAPIrest.sh 
+echo '#!/bin/bash
+if [ "$EUID" -ne 0 ]
+  then echo "Please run this script as root"
+  exit
+fi
+java -cp .:../lib/gson-2.2.2.jar:../lib/nanohttpd-2.2.0.jar:../nanohttpd-webserver-2.2.0.jar edu.marist.jointstudy.APIrest' >> runAPIrest.sh 
 
 echo "Your API Honeypot is now installed. Please run the file 'runAPIrest.sh' to start your server."
 
