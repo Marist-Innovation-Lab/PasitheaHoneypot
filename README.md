@@ -27,4 +27,10 @@ Then, run the server!
 ```sh
 $ sudo ./runAPIrest.sh
 ```
-After Pasithea has been deployed, any attempt on the API Honeypot will be logged in a '~' delimited log file named API.log in the src folder.
+After Pasithea has been deployed, any attempt on the API Honeypot will be logged in a '~' delimited log file named API.log in the src folder.  
+If you would like to run Paisthea in the background, check out [screen]!  
+If you would like to have Paisthea run on boot add the path to your runAPIrest.sh file to your `/etc/rc.local` file.   
+
+
+[screen]: https://help.ubuntu.com/community/Screen
+

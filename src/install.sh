@@ -44,7 +44,7 @@ function install_dependencies {
 
 	for i in default-jre default-jdk ; do
 	  echo -en "\n>Installing $i...\n"
-	  apt-get install -q -y $i
+	  apt-get install -qq -y $i
 	done
 }
 
@@ -67,7 +67,7 @@ function set_env {
 	echo -e "Checking if you have an HPID..."
 	CHECK_ID_ENVIROMENT=$(grep -oP "HPID=.*" /etc/environment | sed 's/HPID=//g')
 	if [[ -z $CHECK_ID_ENVIROMENT ]]
-	 then 
+	 then
 	  echo -e "Generating your unique HPID..."
 	  export HPID=$(dbus-uuidgen)
 	  echo "HPID=${HPID}" >> /etc/environment
@@ -75,13 +75,12 @@ function set_env {
 }
 
 function port_config {
-	
 	if [[ -z ${1} ]]
-		then 
-		PORT_NUM="8080"
+		then
+		PORT_NUM="8082"
 	fi
 	echo -e "Configuring port number..."
-	sed -i "s/apiPort    = 8080/apiPort    = "$1"/" edu/marist/jointstudy/APIrest.java
+	sed -i "s/apiPort    = 8082/apiPort    = "$1"/" edu/marist/jointstudy/APIrest.java
 }
 
 #################################################################################################
@@ -92,7 +91,7 @@ check_root
 display_intro
 install_dependencies
 set_env
-echo -e "Please enter the port number you would like to configure the APIhp on. Press Enter to default to 8080"
+echo -e "Please enter the port number you would like to configure the APIhp on. Press Enter to default to 8082."
 read PORT_NUM
 port_config ${PORT_NUM}
 
@@ -106,9 +105,10 @@ if [ "$EUID" -ne 0 ]
   then echo "Please run this script as root"
   exit
 fi
+cd "${0%/*}"
 java -cp .:../lib/gson-2.2.2.jar:../lib/nanohttpd-2.2.0.jar:../nanohttpd-webserver-2.2.0.jar edu.marist.jointstudy.APIrest' >> runAPIrest.sh 
 
-echo "Your API Honeypot is now installed. Please run the file 'runAPIrest.sh' to start your server."
+echo "Your API Honeypot is now installed. Please run the file 'runAPIrest.sh' to start your server. To run this server in the background, check out screen. To run this server on startup, check out the github documentation."
 
 #################################################################################################
 
