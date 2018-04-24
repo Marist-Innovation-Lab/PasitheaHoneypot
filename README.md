@@ -4,7 +4,7 @@
 
 Pasithea has a built in install script for easy installs on Ubuntu machines.
 
-##### 1. Run the install script -- NOTE: this install script will attempt to install the nessecary dependancys for Pasithea as well as the honeypot itself. IF the installation fails, please ensure you have the latest version of java installed.
+##### 1. Run the install script† 
 ```sh
 $ cd PasitheaHoneypot/src
 $ sudo ./install.sh
@@ -29,7 +29,10 @@ $ sudo ./runAPIrest.sh
 ```
 After Pasithea has been deployed, any attempt on the API Honeypot will be logged in a '~' delimited log file named API.log in the src folder.  
 If you would like to run Paisthea in the background, check out [screen]!  
-If you would like to have Paisthea run on boot add the path to your runAPIrest.sh file to your `/etc/rc.local` file.   
+If you would like to have Paisthea run on boot add the path to your runAPIrest.sh file to your `/etc/rc.local` file.     
+
+
+† NOTE: this install script will attempt to install the nessecary dependancys for Pasithea as well as the honeypot itself. IF the installation fails, please ensure you have the latest version of java installed.
 
 
 [screen]: https://help.ubuntu.com/community/Screen
