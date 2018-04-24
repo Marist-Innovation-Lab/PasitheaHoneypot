@@ -4,7 +4,7 @@
 
 Pasithea has a built in install script for easy installs on Ubuntu machines.
 
-##### 1. Run the install script
+##### 1. Run the install script -- NOTE: this install script will attempt to install the nessecary dependancys for Pasithea as well as the honeypot itself. IF the installation fails, please ensure you have the latest version of java installed.
 ```sh
 $ cd PasitheaHoneypot/src
 $ sudo ./install.sh
