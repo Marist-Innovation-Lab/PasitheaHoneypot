@@ -32,7 +32,7 @@ If you would like to run Paisthea in the background, check out [screen]!
 If you would like to have Paisthea run on boot add the path to your runAPIrest.sh file to your `/etc/rc.local` file.     
 
 
-† NOTE: this install script will attempt to install the nessecary dependancys for Pasithea as well as the honeypot itself. IF the installation fails, please ensure you have the latest version of java installed.
+† NOTE: this install script will attempt to install the nessecary dependencies for Pasithea as well as the honeypot itself. IF the installation fails, please ensure you have the latest version of java installed.
 
 
 [screen]: https://help.ubuntu.com/community/Screen
